@@ -45,7 +45,8 @@ public class RouteFromAtoB {
         arr[index] = arr[index - d] + arr[index / c];
       } else if (index - d >= 0) { // для исключения выхода за диапазон массива.
         arr[index] = arr[index - d];
-      }
+      } else if (index % c == 0)
+      arr[index] = arr[index / c];
     }
     return arr;
   }
@@ -57,6 +58,8 @@ public class RouteFromAtoB {
       arr[i] = arr[i - d] + arr[i / c];
     else if (i - d >= 0)
       arr[i] = arr[(i - d)];
+    else if (i % c == 0)
+      arr[i] = arr[i / c];
 
     solveRec(a, b, c, d, arr, i + 1);
   }
@@ -158,7 +161,10 @@ public class RouteFromAtoB {
           if (allRoutes.get(i).length() < route.length())
             route = allRoutes.get(i);
         }
-        System.out.printf("\nОдин из оптимальных мартшрутов: \n%s\n", route);
+        System.out.printf("\nОдин из оптимальных мартшрутов: \n%s\n\n", route);
+        for (String elemString : allRoutes) {
+          System.out.println(elemString);
+        }
       }
     }
   }
