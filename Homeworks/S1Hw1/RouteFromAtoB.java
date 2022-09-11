@@ -9,6 +9,8 @@
 ответ: нет решения. 
 *Подумать над тем, как сделать минимальное количество команд
  */
+package Homeworks.S1Hw1;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
