@@ -1,4 +1,4 @@
-package Seminars.S2T1_subsequence;
+package Seminars.S2T1Subsequence;
 
 /**
  * Найти общую подпоследовательность для двух заданных последовательностей.
